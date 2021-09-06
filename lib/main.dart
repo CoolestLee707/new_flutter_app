@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'bottom/bottomNavigation.dart';
+import 'shareWidgets/bottomNavigation.dart';
 
 void main() => runApp(listApp());
 
