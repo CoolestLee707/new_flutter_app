@@ -9,6 +9,7 @@ class NewsThird extends StatelessWidget {
       appBar: AppBar(
         title: Text('电影'),
         elevation: 0.0,
+        backgroundColor: Colors.red,
       ),
       body: Text('33'),
     );

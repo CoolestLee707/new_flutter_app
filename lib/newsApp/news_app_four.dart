@@ -9,6 +9,7 @@ class NewsFour extends StatelessWidget {
       appBar: AppBar(
         title: Text('我的'),
         elevation: 0.0,
+        backgroundColor: Colors.red,
       ),
       body: Text('44'),
     );

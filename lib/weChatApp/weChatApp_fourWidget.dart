@@ -9,6 +9,7 @@ class WeChatFour extends StatelessWidget {
       appBar: AppBar(
         title: Text('通讯录'),
         elevation: 0.0,
+        backgroundColor: Colors.green,
       ),
       body: Text('4'),
     );

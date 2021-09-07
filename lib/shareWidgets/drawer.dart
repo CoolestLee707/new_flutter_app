@@ -16,27 +16,26 @@ class drawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: ListView(
-        padding: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 83.0),
+        padding: EdgeInsets.fromLTRB(.0, 0.0, 0.0, 10.0),
         children: <Widget>[
           DrawerHeader(
             child: Text(
-              'header'.toUpperCase(),
+              '选择App'.toUpperCase(),
               style: TextStyle(fontSize: 30.0, color: Colors.yellow),
             ),
             decoration: BoxDecoration(
-              color: Colors.black,
+              color: Colors.blueGrey,
             ),
           ),
           ListTile(
-            leading: Icon(Icons.supervised_user_circle),
+            leading: Icon(
+              Icons.supervised_user_circle,
+              color: Colors.green,
+              size: 50,
+            ),
             title: Text(
               'weChat',
               textAlign: TextAlign.center,
-            ),
-            trailing: Icon(
-              Icons.supervised_user_circle,
-              color: Colors.green,
-              size: 30.0,
             ),
             onTap: () => {
               this.onDrawerCall!(DrawerIndex.WeChat),
@@ -44,15 +43,14 @@ class drawer extends StatelessWidget {
             },
           ),
           ListTile(
-              leading: Icon(Icons.favorite),
+              leading: Icon(
+                Icons.book,
+                color: Colors.red,
+                size: 50,
+              ),
               title: Text(
                 'newsApp',
                 textAlign: TextAlign.center,
-              ),
-              trailing: Icon(
-                Icons.favorite,
-                color: Colors.red,
-                size: 30.0,
               ),
               onTap: () => {
                     this.onDrawerCall!(DrawerIndex.NewsApp),

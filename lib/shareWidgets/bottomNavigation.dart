@@ -18,6 +18,7 @@ class BottomNavigation extends StatefulWidget {
 
 class _BottomNavigationState extends State<BottomNavigation> {
   int _currentIndex = 0;
+  Color? themeColor;
   DrawerIndex? drawerIndex;
   Widget? screenView;
   List<Widget> list = [];
@@ -31,7 +32,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
       ..add(NewsThird())
       ..add(NewsFour());
     textList..add('头条')..add('视频')..add('放映厅')..add('我的');
-
+    themeColor = Colors.red;
     super.initState();
   }
 
@@ -53,7 +54,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
         ), //左边边界右滑
         bottomNavigationBar: BottomNavigationBar(
             type: BottomNavigationBarType.fixed,
-            fixedColor: Colors.red, //
+            fixedColor: themeColor, //
             unselectedItemColor: Colors.black54,
             currentIndex: _currentIndex,
             onTap: _onTapHandler, //点击会调用这个方法去重新渲染
@@ -84,11 +85,13 @@ class _BottomNavigationState extends State<BottomNavigation> {
         setState(() {
           list = [WeChatFirst(), WeChatSecond(), WeChatThird(), WeChatFour()];
           textList = ['微信', '通讯录', '发现', '我的'];
+          themeColor = Colors.green;
         });
       } else if (drawerIndex == DrawerIndex.NewsApp) {
         setState(() {
           list = [NewsFirst(), NewsSecond(), NewsThird(), NewsFour()];
           textList = ['头条', '视频', '放映厅', '我的'];
+          themeColor = Colors.red;
         });
       } else {
         //do in your way......

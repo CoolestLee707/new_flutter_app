@@ -9,6 +9,7 @@ class WeChatThird extends StatelessWidget {
       appBar: AppBar(
         title: Text('我的'),
         elevation: 0.0,
+        backgroundColor: Colors.green,
       ),
       body: Text('3'),
     );

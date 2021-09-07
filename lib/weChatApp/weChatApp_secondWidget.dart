@@ -9,6 +9,7 @@ class WeChatSecond extends StatelessWidget {
       appBar: AppBar(
         title: Text('发现'),
         elevation: 0.0,
+        backgroundColor: Colors.green,
       ),
       body: Text('2'),
     );

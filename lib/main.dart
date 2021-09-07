@@ -26,9 +26,9 @@ class listApp extends StatelessWidget {
         '/': (context) => BottomNavigation(), //设置路由的根
       },
 
-      // theme: ThemeData.light(),
+      // theme: ThemeData.dark(),
       theme: ThemeData(
-        primarySwatch: Colors.red, //可以改变导航栏颜色
+        // primarySwatch: Colors.red, //可以改变导航栏颜色
         highlightColor: Colors.red, //按钮点击时的颜色
         splashColor: Colors.blue, //水波纹的颜色
         accentColor: Colors.blue,

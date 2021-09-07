@@ -9,6 +9,7 @@ class WeChatFirst extends StatelessWidget {
       appBar: AppBar(
         title: Text('微信'),
         elevation: 0.0,
+        backgroundColor: Colors.green,
       ),
       body: Text('1'),
     );

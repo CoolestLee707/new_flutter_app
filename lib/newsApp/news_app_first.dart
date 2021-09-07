@@ -19,6 +19,7 @@ class NewsFirst extends StatelessWidget {
               onPressed: () => Navigator.pushNamed(context, '/mdc'),
             )
           ],
+          backgroundColor: Colors.red,
           elevation: 0.0,
           bottom: TabBar(
             isScrollable: true,
