@@ -42,15 +42,15 @@ class _WeChatFourState extends State<WeChatFour> {
         child: ListView(
           children: textList.map((title) {
             if (title == 'header') {
-              return DrawerHeader(
+              return Container(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     ClipRRect(
                       borderRadius: BorderRadius.all(Radius.circular(8)),
-                      child: Image.network(
-                        'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3647580866,433574712&fm=26&gp=0.jpg',
+                      child: Image.asset(
+                        'lib/assets/weChat/weChat_avatar.JPG',
                         width: 80,
                         height: 80,
                       ),
@@ -63,7 +63,7 @@ class _WeChatFourState extends State<WeChatFour> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            '安琪拉',
+                            '野原新之助',
                             style: TextStyle(fontSize: 21, color: Colors.black),
                           ),
                           Text(
@@ -119,8 +119,7 @@ class _WeChatFourState extends State<WeChatFour> {
                     ),
                   ],
                 ),
-                margin: EdgeInsets.only(bottom: 20),
-                padding: EdgeInsets.fromLTRB(20, 40, 10, 0),
+                padding: EdgeInsets.fromLTRB(20, 40, 10, 10.0),
               );
             }
             if (title == 'Divider') {
