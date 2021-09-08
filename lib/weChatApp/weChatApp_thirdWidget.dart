@@ -7,7 +7,7 @@ class WeChatThird extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('我的'),
+        title: Text('发现'),
         elevation: 0.0,
         backgroundColor: Colors.green,
       ),

@@ -29,9 +29,9 @@ class listApp extends StatelessWidget {
       // theme: ThemeData.dark(),
       theme: ThemeData(
         // primarySwatch: Colors.red, //可以改变导航栏颜色
-        highlightColor: Colors.red, //按钮点击时的颜色
-        splashColor: Colors.blue, //水波纹的颜色
-        accentColor: Colors.blue,
+        highlightColor: Colors.white, //按钮点击时的颜色
+        splashColor: Colors.white, //水波纹的颜色
+        // accentColor: Colors.blue,
       ),
     );
   }

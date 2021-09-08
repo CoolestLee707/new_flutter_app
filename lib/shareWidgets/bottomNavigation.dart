@@ -55,7 +55,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
         bottomNavigationBar: BottomNavigationBar(
             type: BottomNavigationBarType.fixed,
             fixedColor: themeColor, //
-            unselectedItemColor: Colors.black54,
+            unselectedItemColor: Colors.black45,
             currentIndex: _currentIndex,
             onTap: _onTapHandler, //点击会调用这个方法去重新渲染
             items: [
