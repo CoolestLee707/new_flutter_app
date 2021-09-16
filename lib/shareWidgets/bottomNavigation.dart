@@ -17,12 +17,17 @@ class BottomNavigation extends StatefulWidget {
 }
 
 class _BottomNavigationState extends State<BottomNavigation> {
+  double iconNormalWH = 25.0;
+  double iconSelectedWH = 30.0;
+
   int _currentIndex = 0;
   Color? themeColor;
   DrawerIndex? drawerIndex;
   Widget? screenView;
   List<Widget> list = [];
   List<String> textList = [];
+  List<String> iconsList = [];
+  List<String> iconsSeleectList = [];
 
   void initState() {
     // ..谁用完这个方法还返回谁，就可以继续使用
@@ -32,6 +37,16 @@ class _BottomNavigationState extends State<BottomNavigation> {
       ..add(NewsThird())
       ..add(NewsFour());
     textList..add('头条')..add('视频')..add('放映厅')..add('我的');
+    iconsList
+      ..add('lib/assets/weChat/weChat_pay.png')
+      ..add('lib/assets/weChat/weChat_pay.png')
+      ..add('lib/assets/weChat/weChat_pay.png')
+      ..add('lib/assets/weChat/weChat_pay.png');
+    iconsSeleectList
+      ..add('lib/assets/weChat/weChat_kabao.png')
+      ..add('lib/assets/weChat/weChat_kabao.png')
+      ..add('lib/assets/weChat/weChat_kabao.png')
+      ..add('lib/assets/weChat/weChat_kabao.png');
     themeColor = Colors.red;
     super.initState();
   }
@@ -60,19 +75,35 @@ class _BottomNavigationState extends State<BottomNavigation> {
             onTap: _onTapHandler, //点击会调用这个方法去重新渲染
             items: [
               BottomNavigationBarItem(
-                icon: Icon(Icons.new_label_sharp),
+                icon: Image.asset(
+                  _currentIndex == 0 ? iconsSeleectList[0] : iconsList[0],
+                  width: _currentIndex == 0 ? iconSelectedWH : iconNormalWH,
+                  height: _currentIndex == 0 ? iconSelectedWH : iconNormalWH,
+                ),
                 label: textList[0],
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.video_camera_back),
+                icon: Image.asset(
+                  _currentIndex == 1 ? iconsSeleectList[1] : iconsList[1],
+                  width: _currentIndex == 1 ? iconSelectedWH : iconNormalWH,
+                  height: _currentIndex == 1 ? iconSelectedWH : iconNormalWH,
+                ),
                 label: textList[1],
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.list),
+                icon: Image.asset(
+                  _currentIndex == 2 ? iconsSeleectList[2] : iconsList[2],
+                  width: _currentIndex == 2 ? iconSelectedWH : iconNormalWH,
+                  height: _currentIndex == 2 ? iconSelectedWH : iconNormalWH,
+                ),
                 label: textList[2],
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.filter),
+                icon: Image.asset(
+                  _currentIndex == 3 ? iconsSeleectList[3] : iconsList[3],
+                  width: _currentIndex == 3 ? iconSelectedWH : iconNormalWH,
+                  height: _currentIndex == 3 ? iconSelectedWH : iconNormalWH,
+                ),
                 label: textList[3],
               ),
             ]));
