@@ -22,7 +22,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
 
   int _currentIndex = 0;
   Color? themeColor;
-  DrawerIndex? drawerIndex;
+  DrawerIndex? drawerIndex = DrawerIndex.WeChat;
   Widget? screenView;
   List<Widget> list = [];
   List<String> textList = [];
@@ -32,11 +32,15 @@ class _BottomNavigationState extends State<BottomNavigation> {
   void initState() {
     // ..谁用完这个方法还返回谁，就可以继续使用
     list
-      ..add(NewsFirst())
-      ..add(NewsSecond())
-      ..add(NewsThird())
-      ..add(NewsFour());
-    textList..add('头条')..add('视频')..add('放映厅')..add('我的');
+      ..add(WeChatFirst())
+      ..add(WeChatSecond())
+      ..add(WeChatThird())
+      ..add(WeChatFour());
+    textList
+      ..add('微信')
+      ..add('通讯录')
+      ..add('发现')
+      ..add('我的');
     iconsList
       ..add('lib/assets/weChat/weChat_pay.png')
       ..add('lib/assets/weChat/weChat_pay.png')
@@ -116,7 +120,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
         setState(() {
           list = [WeChatFirst(), WeChatSecond(), WeChatThird(), WeChatFour()];
           textList = ['微信', '通讯录', '发现', '我的'];
-          themeColor = Colors.green;
+          themeColor = Color.fromRGBO(0, 217, 103, 1);
         });
       } else if (drawerIndex == DrawerIndex.NewsApp) {
         setState(() {
