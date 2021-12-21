@@ -26,7 +26,7 @@ class _FriendCell extends StatelessWidget {
           child: groupTitle != null
               ? Text(
                   groupTitle!,
-                  style: const TextStyle(color: Colors.grey),
+                  style: const TextStyle(color: Colors.blueGrey),
                 )
               : null,
         ),

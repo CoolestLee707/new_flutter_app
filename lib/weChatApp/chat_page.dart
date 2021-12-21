@@ -55,22 +55,26 @@ class _ChatPageState extends State<ChatPage> {
             return ListTile(
                 title: const Text("李老师"),
                 subtitle: Container(
-                  alignment: Alignment.bottomCenter,
+                  alignment: Alignment.bottomLeft,
                   height: 25,
-                  padding: const EdgeInsets.only(right: 5),
+                  padding: const EdgeInsets.only(left: 5),
                   child: const Text(
-                    "在吗？有紧急事情需要你处理，请速速回来！",
+                    "在吗？有事情需要你处理",
                     overflow: TextOverflow.ellipsis,
                   ),
                 ),
                 //头像
+                trailing: Text(
+                  '刚刚',
+                  style: TextStyle(color: Colors.grey),
+                ),
                 leading: Container(
                   width: 45, height: 45, //宽高
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(12), //圆角
                       image: const DecorationImage(
-                          image:
-                              AssetImage("lib/assets/weChat/weChat_pay.png"))),
+                          image: NetworkImage(
+                              "https://img1.baidu.com/it/u=2585790349,2589001802&fm=26&fmt=auto"))),
                 ));
           },
         ),
