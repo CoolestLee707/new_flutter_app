@@ -58,7 +58,7 @@ class _IndexBarState extends State<IndexBar> {
                     alignment: const Alignment(-0.2, 0),
                     children: [
                       const Image(
-                        image: AssetImage("images/气泡.png"),
+                        image: AssetImage("lib/assets/weChat/weChat_qipao.png"),
                         width: 60,
                       ),
                       Text(
