@@ -19,7 +19,6 @@ class BottomNavigation extends StatefulWidget {
 class _BottomNavigationState extends State<BottomNavigation> {
   double iconNormalWH = 25.0;
   double iconSelectedWH = 30.0;
-
   int _currentIndex = 0;
   Color? themeColor;
   DrawerIndex? drawerIndex = DrawerIndex.WeChat;
@@ -27,7 +26,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
   List<Widget> list = [];
   List<String> textList = [];
   List<String> iconsList = [];
-  List<String> iconsSeleectList = [];
+  List<String> iconsSelectedList = [];
 
   void initState() {
     // ..谁用完这个方法还返回谁，就可以继续使用
@@ -42,15 +41,16 @@ class _BottomNavigationState extends State<BottomNavigation> {
       ..add('发现')
       ..add('我的');
     iconsList
-      ..add('lib/assets/weChat/weChat_pay.png')
-      ..add('lib/assets/weChat/weChat_pay.png')
-      ..add('lib/assets/weChat/weChat_pay.png')
-      ..add('lib/assets/weChat/weChat_pay.png');
-    iconsSeleectList
-      ..add('lib/assets/weChat/weChat_kabao.png')
-      ..add('lib/assets/weChat/weChat_kabao.png')
-      ..add('lib/assets/weChat/weChat_kabao.png')
-      ..add('lib/assets/weChat/weChat_kabao.png');
+      ..add('lib/assets/weChat/wechat1_normal.png')
+      ..add('lib/assets/weChat/wechat2_normal.png')
+      ..add('lib/assets/weChat/wechat3_normal.png')
+      ..add('lib/assets/weChat/wechat4_normal.png');
+    iconsSelectedList
+      ..add('lib/assets/weChat/wechat1_selected.png')
+      ..add('lib/assets/weChat/wechat2_selected.png')
+      ..add('lib/assets/weChat/wechat3_selected.png')
+      ..add('lib/assets/weChat/wechat4_selected.png');
+
     themeColor = Colors.red;
     super.initState();
   }
@@ -80,7 +80,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
             items: [
               BottomNavigationBarItem(
                 icon: Image.asset(
-                  _currentIndex == 0 ? iconsSeleectList[0] : iconsList[0],
+                  _currentIndex == 0 ? iconsSelectedList[0] : iconsList[0],
                   width: _currentIndex == 0 ? iconSelectedWH : iconNormalWH,
                   height: _currentIndex == 0 ? iconSelectedWH : iconNormalWH,
                 ),
@@ -88,7 +88,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
               ),
               BottomNavigationBarItem(
                 icon: Image.asset(
-                  _currentIndex == 1 ? iconsSeleectList[1] : iconsList[1],
+                  _currentIndex == 1 ? iconsSelectedList[1] : iconsList[1],
                   width: _currentIndex == 1 ? iconSelectedWH : iconNormalWH,
                   height: _currentIndex == 1 ? iconSelectedWH : iconNormalWH,
                 ),
@@ -96,7 +96,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
               ),
               BottomNavigationBarItem(
                 icon: Image.asset(
-                  _currentIndex == 2 ? iconsSeleectList[2] : iconsList[2],
+                  _currentIndex == 2 ? iconsSelectedList[2] : iconsList[2],
                   width: _currentIndex == 2 ? iconSelectedWH : iconNormalWH,
                   height: _currentIndex == 2 ? iconSelectedWH : iconNormalWH,
                 ),
@@ -104,7 +104,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
               ),
               BottomNavigationBarItem(
                 icon: Image.asset(
-                  _currentIndex == 3 ? iconsSeleectList[3] : iconsList[3],
+                  _currentIndex == 3 ? iconsSelectedList[3] : iconsList[3],
                   width: _currentIndex == 3 ? iconSelectedWH : iconNormalWH,
                   height: _currentIndex == 3 ? iconSelectedWH : iconNormalWH,
                 ),
@@ -120,12 +120,36 @@ class _BottomNavigationState extends State<BottomNavigation> {
         setState(() {
           list = [WeChatFirst(), WeChatSecond(), WeChatThird(), WeChatFour()];
           textList = ['微信', '通讯录', '发现', '我的'];
+          iconsList = [
+            'lib/assets/weChat/wechat1_normal.png',
+            'lib/assets/weChat/wechat2_normal.png',
+            'lib/assets/weChat/wechat3_normal.png',
+            'lib/assets/weChat/wechat4_normal.png'
+          ];
+          iconsSelectedList = [
+            'lib/assets/weChat/wechat1_selected.png',
+            'lib/assets/weChat/wechat2_selected.png',
+            'lib/assets/weChat/wechat3_selected.png',
+            'lib/assets/weChat/wechat4_selected.png'
+          ];
           themeColor = Color.fromRGBO(0, 217, 103, 1);
         });
       } else if (drawerIndex == DrawerIndex.NewsApp) {
         setState(() {
           list = [NewsFirst(), listViewDemo(), NewsThird(), SliverDemo()];
           textList = ['头条', '视频', '放映厅', '我的'];
+          iconsList = [
+            'lib/assets/weChat/news1_normal.png',
+            'lib/assets/weChat/news2_normal.png',
+            'lib/assets/weChat/news3_normal.png',
+            'lib/assets/weChat/news4_normal.png',
+          ];
+          iconsSelectedList = [
+            'lib/assets/weChat/news1_selected.png',
+            'lib/assets/weChat/news2_selected.png',
+            'lib/assets/weChat/news3_selected.png',
+            'lib/assets/weChat/news4_selected.png',
+          ];
           themeColor = Colors.red;
         });
       } else {
