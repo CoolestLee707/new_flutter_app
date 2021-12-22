@@ -16,34 +16,36 @@ class PostShow extends StatelessWidget {
           title: Text('${post.title}'),
           elevation: 0.0,
         ),
-        body: Column(
-          children: <Widget>[
-            Image.network(
-              post.imageUrl,
-            ),
-            Container(
-              padding: EdgeInsets.all(32.0),
-              color: Colors.red[50],
-              width: double.infinity, //容器占满所有宽度
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Text(
-                    '${post.title}',
-                  ),
-                  Text(
-                    '${post.auther}',
-                  ),
-                  SizedBox(
-                    height: 32.0,
-                  ),
-                  Text(
-                    '${post.description}',
-                  ),
-                ],
+        body: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              Image.network(
+                post.imageUrl,
               ),
-            ),
-          ],
+              Container(
+                padding: EdgeInsets.all(32.0),
+                color: Colors.red[50],
+                width: double.infinity, //容器占满所有宽度
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text(
+                      '${post.title}',
+                    ),
+                    Text(
+                      '${post.auther}',
+                    ),
+                    SizedBox(
+                      height: 32.0,
+                    ),
+                    Text(
+                      '${post.description}',
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

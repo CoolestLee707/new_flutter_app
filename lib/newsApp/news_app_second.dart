@@ -42,9 +42,16 @@ class listViewDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return ListView.builder(
-      itemCount: posts.length,
-      itemBuilder: _listItemBuilder,
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('视频'),
+        elevation: 0.0,
+        backgroundColor: Colors.red,
+      ),
+      body: ListView.builder(
+        itemCount: posts.length,
+        itemBuilder: _listItemBuilder,
+      ),
     );
   }
 }
