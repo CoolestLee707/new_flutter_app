@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import '../demos/button_demo.dart';
 import '../demos/floating_action_button_demo.dart';
 import '../demos/popup_menu_button_demo.dart';
-import '../demos/checkbox_demo.dart';
 import '../demos/switch_demo.dart';
 import '../demos/slider_demo.dart';
 import '../demos/datetime_demo.dart';
@@ -11,7 +10,6 @@ import '../demos/alert_dialog_demo.dart';
 import '../demos/snack_bar_demo.dart';
 import '../demos/chip_demo.dart';
 import '../demos/card_demo.dart';
-import '../demos/stepper_demo.dart';
 import '../animation/animation_demo.dart';
 
 class MaterialComponents extends StatelessWidget {
@@ -32,10 +30,6 @@ class MaterialComponents extends StatelessWidget {
           page: PopupMenuButtonDemo(),
         ),
         // 创建用户输入相关的小部件的演示页面---复选框
-        ListItem(
-          title: 'CheckboxDemo-复选框/带标签与图标的复选框',
-          page: CheckboxDemo(),
-        ),
         ListItem(
           title: 'SwitchDemo--开关',
           page: SwitchDemo(),
@@ -71,10 +65,6 @@ class MaterialComponents extends StatelessWidget {
         ListItem(
           title: 'CardDemo--卡片',
           page: CardDemo(),
-        ),
-        ListItem(
-          title: 'StepperDemo--步骤',
-          page: StepperDemo(),
         ),
         ListItem(
           title: 'AnimationDemo--动画',

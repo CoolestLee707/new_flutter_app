@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 enum DrawerIndex {
@@ -27,30 +29,38 @@ class drawer extends StatelessWidget {
               color: Colors.blueGrey,
             ),
           ),
+          SizedBox(
+            height: 30,
+          ),
           ListTile(
             leading: Icon(
-              Icons.supervised_user_circle,
+              Icons.chat_bubble_outline_outlined,
               color: Colors.green,
               size: 50,
             ),
             title: Text(
-              'weChat',
+              '微信',
               textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 20, color: Colors.green),
             ),
             onTap: () => {
               this.onDrawerCall!(DrawerIndex.WeChat),
               Navigator.pop(context)
             },
           ),
+          SizedBox(
+            height: 30,
+          ),
           ListTile(
               leading: Icon(
-                Icons.book,
+                Icons.reorder,
                 color: Colors.red,
                 size: 50,
               ),
               title: Text(
-                'newsApp',
+                '头条',
                 textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 20, color: Colors.red),
               ),
               onTap: () => {
                     this.onDrawerCall!(DrawerIndex.NewsApp),

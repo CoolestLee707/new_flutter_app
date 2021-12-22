@@ -6,14 +6,13 @@ class SliderDemo extends StatefulWidget {
 }
 
 class _SliderDemoState extends State<SliderDemo> {
-
   double _sliderItemA = 0.0;
-  
+
   @override
   Widget build(BuildContext context) {
-   return Scaffold(
+    return Scaffold(
       appBar: AppBar(
-        title: Text("CheckboxDemo"),
+        title: Text("SliderDemo"),
         elevation: 0.0,
       ),
       body: Container(
@@ -26,7 +25,7 @@ class _SliderDemoState extends State<SliderDemo> {
               children: <Widget>[
                 Slider(
                   value: _sliderItemA,
-                  onChanged: (value){
+                  onChanged: (value) {
                     setState(() {
                       _sliderItemA = value;
                     });
@@ -35,12 +34,14 @@ class _SliderDemoState extends State<SliderDemo> {
                   inactiveColor: Colors.green.withOpacity(0.3),
                   min: 0.0,
                   max: 100.0,
-                  divisions: 10,//分割份数
-                  label: '${_sliderItemA.toInt()}',//拖动时显示文字
+                  divisions: 10, //分割份数
+                  label: '${_sliderItemA.toInt()}', //拖动时显示文字
                 )
               ],
             ),
-            SizedBox(height: 20.0,),
+            SizedBox(
+              height: 20.0,
+            ),
             Text('$_sliderItemA')
           ],
         ),

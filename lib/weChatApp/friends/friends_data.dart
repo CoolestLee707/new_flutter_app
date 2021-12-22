@@ -11,95 +11,113 @@ class Friends {
 //好友列表
 List<Friends> datas = [
   Friends(
-      imageUrl: 'https://randomuser.me/api/portraits/women/27.jpg',
+      imageUrl:
+          'https://img1.baidu.com/it/u=2585790349,2589001802&fm=26&fmt=auto',
       name: 'Lina',
       indexLetter: 'L'),
   Friends(
-      imageUrl: 'https://randomuser.me/api/portraits/women/17.jpg',
+      imageUrl:
+          'https://img1.baidu.com/it/u=2585790349,2589001802&fm=26&fmt=auto',
       name: '菲儿',
       indexLetter: 'F'),
   Friends(
-      imageUrl: 'https://randomuser.me/api/portraits/women/16.jpg',
+      imageUrl:
+          'https://img1.baidu.com/it/u=2585790349,2589001802&fm=26&fmt=auto',
       name: '安莉',
       indexLetter: 'A'),
   Friends(
-      imageUrl: 'https://randomuser.me/api/portraits/men/31.jpg',
+      imageUrl:
+          'https://img1.baidu.com/it/u=2585790349,2589001802&fm=26&fmt=auto',
       name: 'angle',
       indexLetter: 'A'),
   Friends(
-      imageUrl: 'https://randomuser.me/api/portraits/women/22.jpg',
+      imageUrl:
+          'https://img1.baidu.com/it/u=2585790349,2589001802&fm=26&fmt=auto',
       name: '贝拉',
       indexLetter: 'B'),
   Friends(
-      imageUrl: 'https://randomuser.me/api/portraits/women/37.jpg',
+      imageUrl:
+          'https://img1.baidu.com/it/u=2585790349,2589001802&fm=26&fmt=auto',
       name: 'Lina',
       indexLetter: 'L'),
   Friends(
-      imageUrl: 'https://randomuser.me/api/portraits/women/18.jpg',
+      imageUrl:
+          'https://img1.baidu.com/it/u=2585790349,2589001802&fm=26&fmt=auto',
       name: 'Nancy',
       indexLetter: 'N'),
   Friends(
-      imageUrl: 'https://randomuser.me/api/portraits/men/47.jpg',
+      imageUrl:
+          'https://img1.baidu.com/it/u=2585790349,2589001802&fm=26&fmt=auto',
       name: '扣扣',
       indexLetter: 'K'),
   Friends(
-      imageUrl: 'https://randomuser.me/api/portraits/men/3.jpg',
+      imageUrl:
+          'https://img1.baidu.com/it/u=2585790349,2589001802&fm=26&fmt=auto',
       name: 'Jack',
       indexLetter: 'J'),
   Friends(
-      imageUrl: 'https://randomuser.me/api/portraits/men/3.jpg',
+      imageUrl:
+          'https://img1.baidu.com/it/u=2585790349,2589001802&fm=26&fmt=auto',
       name: 'Cack',
       indexLetter: 'C'),
   Friends(
-      imageUrl: 'https://randomuser.me/api/portraits/men/3.jpg',
+      imageUrl:
+          'https://img1.baidu.com/it/u=2585790349,2589001802&fm=26&fmt=auto',
       name: 'Mark',
       indexLetter: 'M'),
   Friends(
-      imageUrl: 'https://randomuser.me/api/portraits/women/5.jpg',
+      imageUrl:
+          'https://img1.baidu.com/it/u=2585790349,2589001802&fm=26&fmt=auto',
       name: 'Emma',
       indexLetter: 'E'),
   Friends(
-      imageUrl: 'https://randomuser.me/api/portraits/women/24.jpg',
+      imageUrl:
+          'https://img1.baidu.com/it/u=2585790349,2589001802&fm=26&fmt=auto',
       name: 'Abby',
       indexLetter: 'A'),
   Friends(
-      imageUrl: 'https://randomuser.me/api/portraits/men/15.jpg',
+      imageUrl:
+          'https://img1.baidu.com/it/u=2585790349,2589001802&fm=26&fmt=auto',
       name: 'Betty',
       indexLetter: 'B'),
   Friends(
-      imageUrl: 'https://randomuser.me/api/portraits/men/23.jpg',
+      imageUrl:
+          'https://img1.baidu.com/it/u=2585790349,2589001802&fm=26&fmt=auto',
       name: 'Tony',
       indexLetter: 'T'),
   Friends(
-      imageUrl: 'https://randomuser.me/api/portraits/men/13.jpg',
+      imageUrl:
+          'https://img1.baidu.com/it/u=2585790349,2589001802&fm=26&fmt=auto',
       name: 'Tony',
       indexLetter: 'T'),
   Friends(
-      imageUrl: 'https://randomuser.me/api/portraits/men/26.jpg',
+      imageUrl:
+          'https://img1.baidu.com/it/u=2585790349,2589001802&fm=26&fmt=auto',
       name: 'Jerry',
       indexLetter: 'J'),
   Friends(
-      imageUrl: 'https://randomuser.me/api/portraits/men/38.jpg',
+      imageUrl:
+          'https://img1.baidu.com/it/u=2585790349,2589001802&fm=26&fmt=auto',
       name: 'Colin',
       indexLetter: 'C'),
   Friends(
-      imageUrl: 'https://randomuser.me/api/portraits/men/36.jpg',
+      imageUrl:
+          'https://img1.baidu.com/it/u=2585790349,2589001802&fm=26&fmt=auto',
       name: 'Nolin',
       indexLetter: 'N'),
   Friends(
-      imageUrl: 'https://randomuser.me/api/portraits/women/12.jpg',
+      imageUrl:
+          'https://img1.baidu.com/it/u=2585790349,2589001802&fm=26&fmt=auto',
       name: 'Haha',
       indexLetter: 'H'),
   Friends(
-      imageUrl: 'https://randomuser.me/api/portraits/women/11.jpg',
+      imageUrl:
+          'https://img1.baidu.com/it/u=2585790349,2589001802&fm=26&fmt=auto',
       name: 'Ketty',
       indexLetter: 'K'),
   Friends(
-      imageUrl: 'https://randomuser.me/api/portraits/women/16.jpg',
-      name: 'Lina',
-      indexLetter: 'L'),
-  Friends(
-      imageUrl: 'https://randomuser.me/api/portraits/women/33.jpg',
+      imageUrl:
+          'https://img1.baidu.com/it/u=2585790349,2589001802&fm=26&fmt=auto',
       name: 'Lina',
       indexLetter: 'L'),
 ];

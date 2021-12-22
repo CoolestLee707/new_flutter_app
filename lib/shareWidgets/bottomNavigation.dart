@@ -124,7 +124,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
         });
       } else if (drawerIndex == DrawerIndex.NewsApp) {
         setState(() {
-          list = [NewsFirst(), NewsSecond(), NewsThird(), NewsFour()];
+          list = [NewsFirst(), listViewDemo(), NewsThird(), SliverDemo()];
           textList = ['头条', '视频', '放映厅', '我的'];
           themeColor = Colors.red;
         });

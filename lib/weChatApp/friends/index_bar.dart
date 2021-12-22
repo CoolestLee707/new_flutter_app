@@ -122,7 +122,6 @@ int getIndexItem(BuildContext context, Offset globalPosition) {
   var itemHeight = screenHeight(context) / 2 / INDEX_WORDS.length;
   int index =
       y ~/ itemHeight.clamp(0, INDEX_WORDS.length - 1); //~取整,设置取整范围clamp
-  print("${INDEX_WORDS[index]}");
   return index;
 }
 

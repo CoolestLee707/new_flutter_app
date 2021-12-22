@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../weChatApp/model/post.dart';
 
 class NewsFirst extends StatelessWidget {
   const NewsFirst({Key? key}) : super(key: key);
@@ -15,19 +16,20 @@ class NewsFirst extends StatelessWidget {
             IconButton(
               icon: Icon(Icons.search),
               tooltip: 'Search',
-              // onPressed: () => debugPrint('Search button is pressed'),
-              onPressed: () => Navigator.pushNamed(context, '/mdc'),
+              onPressed: () => debugPrint('Search button is pressed'),
             )
           ],
           backgroundColor: Colors.red,
           elevation: 0.0,
           bottom: TabBar(
             isScrollable: true,
-            unselectedLabelColor: Colors.black54, //
+            unselectedLabelColor: Colors.black45, //
             labelColor: Colors.yellow,
             indicatorColor: Colors.yellowAccent, //线的颜色
             indicatorSize: TabBarIndicatorSize.label, //线的长度
             indicatorWeight: 3.0, //线的粗细
+            unselectedLabelStyle: TextStyle(fontSize: 16),
+            labelStyle: TextStyle(fontSize: 18),
             tabs: <Widget>[
               Tab(
                 text: '关注',
@@ -58,20 +60,99 @@ class NewsFirst extends StatelessWidget {
         ),
         body: TabBarView(
           children: <Widget>[
-            Text('555'),
-            Text('555'),
-            Text('555'),
-            Text('555'),
-            Text('555'),
-            Text('555'),
-            Text('555'),
-            Text('555'),
+            Echo(),
+            Echo(),
+            Echo(),
+            Echo(),
+            Echo(),
+            Echo(),
+            Echo(),
+            Echo(),
           ],
         ),
 
         // drawer: Text('this is a drawer'), //左边边界右滑
         // endDrawer: Text('right drawer'),//右边左滑
         // drawer: drawer(),
+      ),
+    );
+  }
+}
+
+class Echo extends StatelessWidget {
+  const Echo({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(16.0),
+      child: ListView(
+        children: posts.map((post) {
+          return Card(
+            child: Column(
+              children: <Widget>[
+                AspectRatio(
+                  aspectRatio: 16 / 9,
+                  // ClipRRect给他的孩子裁剪圆角
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(4.0),
+                      topRight: Radius.circular(4.0),
+                    ),
+                    child: Image.network(
+                      post.imageUrl,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+                ListTile(
+                  leading: CircleAvatar(
+                    backgroundImage: NetworkImage(post.imageUrl),
+                  ),
+                  title: Text(post.title),
+                  subtitle: Text(post.auther),
+                ),
+                Container(
+                  padding: EdgeInsets.all(16.0),
+                  child: Text(
+                    post.description,
+                    maxLines: 3,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+                // ButtonTheme.bar(
+                //   child: ButtonBar(
+                //     children: <Widget>[
+                //       FlatButton(
+                //         child: Text(
+                //           'Like'.toUpperCase(),
+                //           style: TextStyle(color: Colors.red),
+                //         ),
+                //         onPressed: () {},
+                //       ),
+                //       FlatButton(
+                //         child: Text(
+                //           'read'.toUpperCase(),
+                //           style: TextStyle(color: Colors.blue),
+                //         ),
+                //         onPressed: () {},
+                //       ),
+                //       FlatButton(
+                //         child: Text(
+                //           'Like'.toUpperCase(),
+                //           style: TextStyle(color: Colors.green),
+                //         ),
+                //         onPressed: () {},
+                //       ),
+                //     ],
+                //   ),
+                // ),
+              ],
+            ),
+          );
+        }).toList(),
       ),
     );
   }

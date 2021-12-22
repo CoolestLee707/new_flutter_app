@@ -53,7 +53,7 @@ class _DateTimeDemoState extends State<DateTimeDemo> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("CheckboxDemo"),
+        title: Text("DateTimeDemo"),
         elevation: 0.0,
       ),
       body: Container(
