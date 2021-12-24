@@ -12,13 +12,5 @@ class _WeChatSecondState extends State<WeChatSecond> {
   @override
   Widget build(BuildContext context) {
     return FriendsPage();
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('通讯录'),
-        elevation: 0.0,
-        backgroundColor: Color.fromRGBO(0, 217, 103, 1),
-      ),
-      body: Text('2'),
-    );
   }
 }

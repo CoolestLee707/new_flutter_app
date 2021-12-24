@@ -119,7 +119,6 @@ class _FriendsPageState extends State<FriendsPage> {
     _listDatas.sort((Friends a, Friends b) {
       return a.indexLetter!.compareTo(b.indexLetter!);
     });
-    print(_listDatas);
     Future.delayed(Duration.zero, () {
       //字典存放 item对应的高度
       var _groupOffset = _cellHeight * _headerData.length; //头部的高度
