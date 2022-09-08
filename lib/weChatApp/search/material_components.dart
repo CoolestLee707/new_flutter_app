@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
-import '../demos/button_demo.dart';
 import '../demos/floating_action_button_demo.dart';
 import '../demos/popup_menu_button_demo.dart';
 import '../demos/switch_demo.dart';
 import '../demos/slider_demo.dart';
 import '../demos/datetime_demo.dart';
 import '../demos/simple_dialog_demo.dart';
-import '../demos/alert_dialog_demo.dart';
-import '../demos/snack_bar_demo.dart';
 import '../demos/chip_demo.dart';
 import '../demos/card_demo.dart';
 import '../animation/animation_demo.dart';
@@ -17,10 +14,6 @@ class MaterialComponents extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       children: <Widget>[
-        ListItem(
-          title: 'ButtonDemo---按钮集合',
-          page: ButtonDemo(),
-        ),
         ListItem(
           title: 'FloatingActionButton---悬浮按钮',
           page: FloatingActionButtonDemo(),
@@ -48,15 +41,6 @@ class MaterialComponents extends StatelessWidget {
         ListItem(
           title: 'SimpleDialogDemo--显示对话框',
           page: SimpleDialogDemo(),
-        ),
-
-        ListItem(
-          title: 'AlertDialogDemo--提示对话框',
-          page: AlertDialogDemo(),
-        ),
-        ListItem(
-          title: 'SnackBarDemo--操作提示栏',
-          page: SnackBarDemo(),
         ),
         ListItem(
           title: 'ChipDemo--小碎片',
